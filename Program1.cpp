@@ -21,9 +21,26 @@ POINTS & STEPS ==>
     EXECUTION.
 */
 #include <iostream>
+#include <string.h>
 using namespace std;
 int main()
 {
     cout << "Hello world" << endl;
+    char name[20] = "Mohsin";
+    char *p = name;
+    cout << *p << endl;
+    char nameCopy[20];
+    strcpy(nameCopy, p);
+    cout << name << endl;
+    string s = nameCopy;
+    cout << s << endl;
+    char Name[20];
+    int i;
+    for (i = 0; Name[i] != '\0'; i++)
+    {
+        Name[i] = name[i];
+    }
+    Name[i] = '\0';
+    cout << Name << endl;
     return 0;
 }
